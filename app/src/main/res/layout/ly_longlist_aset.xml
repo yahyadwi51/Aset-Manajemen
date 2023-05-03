@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvRuang"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/bgCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="7dp">
+
+        <LinearLayout
+            android:id="@+id/dataatas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="15">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="15"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/baris1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_tgl_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="tgl_input"
+                        android:textColor="@color/black"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_aset_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="aset_name"
+                        android:textColor="@color/black"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/baris2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_nomor_sap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="nomor_sap"
+                        android:textColor="@color/black"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_nilai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="nilai"
+                        android:textColor="@color/black"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/baris3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_aset_jenis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="aset_jenis"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_umur_ekonomis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="umur_ekonomis"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/baris4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_afdeling"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="afdeling"
+                        android:textColor="@color/black"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_no_inv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:text="no_inv"
+                        android:textColor="@color/black"></TextView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/btn_delete"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/ic_outline_close_24"
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/btnQR"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/ic_baseline_qr_code_2_24"
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/btnQRijo"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/ic_baseline_qr_code_green_24"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cvAset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dataatas">
+
+            <Button
+                android:id="@+id/btn_detail"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight=".25"
+                android:backgroundTint="@color/BlueDark"
+                android:text="Detail"
+                android:textColor="@color/white"
+                android:textSize="9sp"></Button>
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/btn_detail"
+                android:layout_weight=".25"
+                android:backgroundTint="@color/BlueDark"
+                android:text="edit"
+                android:textColor="@color/white"
+                android:textSize="10sp"></Button>
+
+            <TextView
+                android:id="@+id/status_posisi"
+                android:layout_width="0dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/btn_edit"
+                android:layout_weight=".32"
+                android:background="@drawable/edit_text_spiner"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="status_posisi"
+                android:textColor="@color/DarkSlateGray"
+                android:textSize="9sp"
+                android:textStyle="italic"></TextView>
+
+            <Button
+                android:id="@+id/btn_kirim"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/status_posisi"
+                android:layout_weight=".25"
+                android:backgroundTint="@color/yellow"
+                android:text="kirim"
+                android:textColor="@color/white"
+                android:textSize="10sp"></Button>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

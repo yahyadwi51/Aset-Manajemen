@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ptpn12.amanat.asem.MainActivity"
+    android:background="@color/background_grey"
+    android:gravity="center"
+    android:padding="30dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLogin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="30dp"
+        android:elevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="20dp"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/Logo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo_amanat"/>
+
+                <TextView
+                    android:id="@+id/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="AMANAT12\nAplikasi\nManajemen Aset Terpadu\nPTPN XII"
+                    android:textColor="@color/BlueDark"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingTop="5dp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etNIP"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_round_corner_border"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif"
+                android:hint="Masukkan Username"
+                android:inputType="text"
+                android:textColor="@color/black2"
+                android:textColorHint="@color/Gray"
+                android:textSize="14sp"
+                tools:ignore="Autofill, HardcodedText"/>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_round_corner_border"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif"
+                android:hint="Masukkan Password"
+                android:textColorHint="@color/Gray"
+                android:inputType="text"
+                android:textColor="@color/black2"
+                android:textSize="14sp"
+                android:password="true"
+                tools:ignore="Autofill, HardcodedText"/>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/BlueDark"
+                android:text="LOGIN"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

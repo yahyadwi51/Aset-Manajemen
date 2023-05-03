@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_grey"
+    tools:context="ptpn12.amanat.asem.LonglistAsetActivity">
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/appbar"/>
+
+
+    <LinearLayout
+        android:id="@+id/upLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:layout_below="@id/switchoff"
+        >
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_weight="0.7"
+            android:id="@+id/svSearch"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:background="@drawable/bg_searchbar"
+            app:queryHint="Cari Data"
+            app:iconifiedByDefault="false"
+            android:textColorHint="@color/grey3"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnFilter"
+            android:layout_marginHorizontal="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/bg_rounded_btn_sc"
+            android:text="FILTER"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:paddingVertical="10dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:paddingVertical="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/btnReport"
+            android:gravity="center"
+            android:text="REPORT"
+            android:textStyle="bold"
+            android:textColor="@color/main_grey"
+            android:textSize="14sp"
+            android:background="@drawable/bg_rounded_btn_main"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/switchoff"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:paddingTop="6dp"
+        android:layout_below="@id/appbar"
+        >
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchoffline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:text="List Data Online"
+            android:textStyle="italic"
+            android:checked="false"
+            />
+
+        <TextView
+            android:id="@+id/tvSwitchOffline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="List Data Offline"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            android:layout_toRightOf="@id/switchoffline"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainAset"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:gravity="center"
+        android:layout_below="@id/upLayout"
+        android:layout_above="@+id/bottomnav"
+        tools:context="ptpn12.amanat.asem.MainActivity">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srlonglist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="ptpn12.amanat.asem.MainActivity"
+            android:orientation="vertical"
+            android:id="@+id/asetGroup"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/asetAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:id="@+id/recView2"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!-- ini action floating button -->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addAset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="20dp"
+            android:contentDescription="add new data"
+            android:backgroundTint="@color/black"
+            android:src="@drawable/ic_baseline_add_24_2"
+            app:fabSize="normal"
+            app:elevation="5dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addDataOffline"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/bg_round_corner"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/tvAddDataOffline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  OFFLINE  "
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnav"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/bottom_nav"/>
+
+</RelativeLayout>

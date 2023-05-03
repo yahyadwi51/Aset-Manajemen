@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">AMANAT12</string>
+    <string-array name="inp_tipe_asset">
+        <item>Aset Baru</item>
+        <item>Aset Lama</item>
+    </string-array>
+    <string name="title_activity_longlist_aset">LonglistAsetActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="baseUrl">http://202.148.9.226:7710/mnj_aset_production/public/api/</string>
+
+    <!--    class name -->
+    <string name="profil">PROFIL</string>
+    <string name="beranda">BERANDA</string>
+    <string name="listData">LIST DATA</string>
+    <string name="tambahData">TAMBAH DATA</string>
+    <string name="editData">EDIT DATA</string>
+    <string name="detailData">DETAIL DATA</string>
+    <string name="reportData">REPORT DATA</string>
+</resources>
