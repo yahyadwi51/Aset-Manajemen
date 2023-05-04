@@ -602,7 +602,7 @@ public class AddAsetActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (!inpPopTotalPohonSaatIni.getText().toString().equals("") && !inpLuasAset.getText().toString().equals("")){
+                if (!inpPopTotalPohonSaatIni.getText().toString().equals("") || !inpLuasAset.getText().toString().equals("")){
 
                     try{
 
@@ -1568,19 +1568,7 @@ public class AddAsetActivity extends AppCompatActivity {
                 inpLuasAset.setVisibility(View.VISIBLE);
 
             }
-            else{
-                tvPopTotalPohonSaatIni.setVisibility(View.VISIBLE);
-                tvPopTotalStdMaster.setVisibility(View.VISIBLE);
-                tvPopPerHA.setVisibility(View.VISIBLE);
-                tvPresentasePopPerHA.setVisibility(View.VISIBLE);
-                inpPopTotalPohonSaatIni.setVisibility(View.VISIBLE);
-                inpPopTotalStdMaster.setVisibility(View.VISIBLE);
-                inpPopPerHA.setVisibility(View.VISIBLE);
-                inpPresentasePopPerHA.setVisibility(View.VISIBLE);
 
-                tvLuasTanaman.setVisibility(View.GONE);
-                inpLuasAset.setVisibility(View.GONE);
-            }
         }
         else if ("kayu".equals(String.valueOf(spinnerJenisAset.getSelectedItem()))) {
 
