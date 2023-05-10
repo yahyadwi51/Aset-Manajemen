@@ -28,6 +28,7 @@ import ptpn12.amanat.asem.DetailAsetActivity;
 import ptpn12.amanat.asem.LonglistAsetActivity;
 import ptpn12.amanat.asem.R;
 import ptpn12.amanat.asem.UpdateAsetActivity;
+import ptpn12.amanat.asem.UpdateFotoQrAsetActivity;
 import ptpn12.amanat.asem.api.AsetInterface;
 import ptpn12.amanat.asem.api.model.AsetModel2;
 import ptpn12.amanat.asem.api.model.DeleteModel;
@@ -107,10 +108,15 @@ public class SearchAsetAdapter extends RecyclerView.Adapter<SearchAsetAdapter.Vi
 //                    context.startActivity(intent);
 //                    return;
 //                }
-
-                Intent intent = new Intent(context, UpdateAsetActivity.class);
+                if (mySearchData.getFotoQr() != null) {
+                    Intent intent = new Intent(context, UpdateAsetActivity.class);
+                    intent.putExtra("id",(mySearchData.getAsetId()));
+                    context.startActivity(intent);
+                }
+                Intent intent = new Intent(context, UpdateFotoQrAsetActivity.class);
                 intent.putExtra("id",(mySearchData.getAsetId()));
                 context.startActivity(intent);
+
             }
         });
 
